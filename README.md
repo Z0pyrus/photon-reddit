@@ -21,29 +21,31 @@ Photon is a website to browse reddit without any distractions (no ads, no crowde
 
 # Selfhosting
 
-## Commands
+## Bare Metal
 
-### Download
+### Commands
+
+#### Download
 
 ```bash
 git clone https://github.com/ArthurHeitmann/photon-reddit.git
 cd photon-reddit
 ```
 
-### Install dependencies & Build
+#### Install dependencies & Build
 
 ```bash
 npm install
 npm run build
 ```
 
-### Start
+#### Start
 
 ```bash
 npm run start
 ```
 
-### Other commands for development
+#### Other commands for development
 
 ```bash
 # auto restart server when js files change
@@ -54,6 +56,7 @@ npm run start-dev
 # watch for Typescript & Sass file changes and auto recompile
 npm run watch
 ```
+
 
 ## Getting Login to work
 
@@ -94,7 +97,31 @@ analyticsPw=
 ```
 
 `DB_x` is for configuring the mariaDB database. `analyticsPw` is for a cookie to access the analytics dashboard. 
-More infos in `analyticsQueryMiddleware()` in `src/serverScripts/analytics.ts`.   
+More infos in `analyticsQueryMiddleware()` in `src/serverScripts/analytics.ts`.
+
+## Docker
+
+### Download from Source
+
+```bash
+git clone https://github.com/ArthurHeitmann/photon-reddit.git
+cd photon-reddit
+docker build -t phtoton-reddit .
+```
+
+### Download Image from hub.docker.com
+
+`docker pull z0pyrus/photon-reddit`
+
+### Setup
+
+To run the image directly: `docker run --name photon -p 8080:8080 z0pyrus/photon-reddit`
+
+### Getting Login to work
+
+Edit the `consts.ts.exaple` file in the main direcotory to your need and start the container with: 
+
+`docker run --name photon -p 8080:8080 -v /path-to-edited-file/consts.ts:/app/src/static/scripts/utils/consts.ts z0pyrus/photon-reddit`
 
 # Technical
 
