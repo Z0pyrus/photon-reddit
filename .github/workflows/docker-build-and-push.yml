@@ -31,8 +31,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: ./Docker/Dockerfile
           context: .
+          file: ${context}/Docker/Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm32/v7
           push: true
           tags: z0pyrus/photon-reddit:latest
