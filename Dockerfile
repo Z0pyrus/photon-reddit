@@ -7,10 +7,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install && \
-    npm install typescript && \
-    npm install npm-run-all && \
-    npm audit fix
+RUN npm install && npm audit fix
 
 CMD [ "npm", "run", "build-and-start" ]
 
