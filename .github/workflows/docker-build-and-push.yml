@@ -1,7 +1,10 @@
-name: ci
+name: docker-build-and-push
 
 on:
   push:
+    branches:
+      - 'main'
+  pull_request:
     branches:
       - 'main'
 
@@ -26,6 +29,6 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           context: .
-          tags: user/app:latest
+          tags: z0pyrus/photon-reddit:latest
           push: true
           
