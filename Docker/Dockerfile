@@ -1,4 +1,4 @@
-FROM --platform=${BUILDPLATFORM:-amd64} node:alpine as build-env
+FROM --platform=${BUILDPLATFORM} node:alpine as build-env
 
 ARG TARGETPLATFORM
 ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
