@@ -123,10 +123,6 @@ Edit the `consts.ts.exaple` file in the main direcotory to your need and start t
 
 `docker run --name photon -p 8080:8080 -v /path-to-edited-file/consts.ts:/app/src/static/scripts/utils/consts.ts z0pyrus/photon-reddit`
 
-### MariaDB
-
-Mariadb is curently not working
-
 # Technical
 
 ## Frontend
