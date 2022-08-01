@@ -1,5 +1,5 @@
 #Edit "amd64" to your platform or pass an environment variable with your platform
-FROM --platform=${TARGETPLATFORM:-amd64} node:alpine as build-env
+FROM node:alpine as build-env
 
 ARG TARGETPLATFORM
 ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
