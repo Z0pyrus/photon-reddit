@@ -1,4 +1,5 @@
-FROM --platform=${BUILDPLATFORM} node:14 as build-env
+#Edit "amd64" to your platform or pass an environment variable with your platform
+FROM --platform=${BUILDPLATFORM:-amd64} node:14 as build-env
 
 ARG TARGETPLATFORM
 ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
