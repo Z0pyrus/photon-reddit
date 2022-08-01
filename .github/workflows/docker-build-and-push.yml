@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ${context}/Docker/Dockerfile
+          file: ./Docker/Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm32/v7
           push: true
           tags: z0pyrus/photon-reddit:latest
