@@ -1,6 +1,28 @@
-export const photonVersion = "1.1.15";		/// <change version script>
+export const photonVersion = "1.1.18";		/// <change version script>
 
 export const photonChangelog = {
+	"1.1.18": {
+		"Fixed": [
+			"Fixed redgifs not working",
+		]
+	},
+	"1.1.17": {
+		"New": [
+			"Added option to change default frontend sort order (Settings > Post > Default Frontpage sort order)",
+		],
+		"Fixed": [
+			"Increased space between images and text from previous update",
+		]
+	},
+	"1.1.16": {
+		"New": [
+			"Support for images with self-text (new reddit update)",
+			"Collapsed comments now show the upvote count",
+		],
+		"Fixed": [
+			"Fixed XKCD images not displaying correctly",
+		]
+	},
 	"1.1.15": {
 		"Fixed": [
 			"Another cache not updating fix.",
