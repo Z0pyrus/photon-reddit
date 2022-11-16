@@ -1,7 +1,7 @@
-FROM node:alpine as build-env
+FROM ${BUILDARCH}/node as build-env
 
 ARG TARGETPLATFORM
-ENV TARGETPLATFORM=${TARGETPLATFORM:-linux/amd64}
+ENV BUILDX_ARCH="${TARGETOS:-linux}-${TARGETARCH}"
 WORKDIR /app
 COPY . .
 RUN npm install && npm audit fix
