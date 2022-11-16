@@ -7,6 +7,8 @@ WORKDIR /app
 
 COPY . .
 
+RUN apt-get update || : && apt-get install python -y
+
 RUN npm install && npm audit fix
 
 CMD [ "npm", "run", "build-and-start" ]

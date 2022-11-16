@@ -1,4 +1,4 @@
-FROM --platform=${BUILDPLATFORM} node as build-env
+FROM arm/node as build-env
 ARG TARGETARCH
 ENV BUILDX_ARCH="${TARGETOS:-linux}-${TARGETARCH}"
 
