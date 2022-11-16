@@ -17,5 +17,5 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           owner: z0pyrus
-          base: master
-          head: master
+          base: Z0pyrus/photon-reddit
+          head: ArthurHeitmann/photon-reddit
