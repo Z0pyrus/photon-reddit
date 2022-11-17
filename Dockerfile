@@ -1,5 +1,5 @@
 ARG TARGETARCH
-FROM ${BUILDPLATFORM}/node as build-env
+FROM ${TARGETARCH}/node as build-env
 ENV BUILDX_ARCH="${TARGETOS:-linux}-${TARGETARCH}"
 
 WORKDIR /app
